@@ -29,6 +29,7 @@
 		35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = AA47708138726B9EB5054DEAFED4376F /* UIImage+Diff.m */; };
 		383448308BB9C5CB67073E0A8DED4A43 /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 968E83BB19700E383197A98D7DFA51BE /* NSObject+MJProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EEC026532F7EE3B62F7145091D5BBEB /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		46EFF3AC8417D5DBEF7DEDE8B4FDCCB5 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 54B7BEB6DD168D6335E79E880AA271BD /* city.json */; };
 		4910117A8553A2B5F6ADA95009D18471 /* BATableViewIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 374C9FAA4138027B3E3AA36C141AA578 /* BATableViewIndex.m */; };
 		4D110C31517D56C45BD00D0E20F7B7C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A3372D15304790853F8F182D8B8616 /* Foundation.framework */; };
 		506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 934BD5662DE0E4EB5AFBB6E55FB2F33F /* FBSnapshotTestCase-dummy.m */; };
@@ -45,7 +46,6 @@
 		69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 415793EDD99DE5DF0275FBDBB4B31441 /* UIImage+Compare.m */; };
 		6DA14D61DB56E00FF18F2F75C51454AE /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = F48C23CFFDA065DA94FE9FDD24E91860 /* MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7050852BBDB2E46DA11D01535D26B176 /* Pods-MRJCitySelect_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F9B6E75D9A1C5AF791AC80D3E06289C /* Pods-MRJCitySelect_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7290457E7C19073A5B5CA903B527B473 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = F2B34FE1D13D48265CED25FA5D3872A8 /* city.json */; };
 		7410B2A65C0651D85D3B173865D3026B /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C329189CC72A14EFD104D13BBC5B6 /* NSObject+MJClass.m */; };
 		7464CC8A9AB19FF3FA805EB133A5DD09 /* Pods-MRJCitySelect_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F85E0242C289851030A9E91D87B583B /* Pods-MRJCitySelect_Example-dummy.m */; };
 		756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 785FE3C0BE266DCB52B9B34B5AE43CD4 /* UIImage+Snapshot.m */; };
@@ -188,6 +188,7 @@
 		478544BA47E49215A59B7524E78DA6DA /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		4F4F19AE58413181E40B0A7FB501CE71 /* UIColor+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
 		4FD7272894158FFB502313DAC2910434 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
+		54B7BEB6DD168D6335E79E880AA271BD /* city.json */ = {isa = PBXFileReference; includeInIndex = 1; name = city.json; path = MRJCitySelect/Assets/city.json; sourceTree = "<group>"; };
 		56EEB1177CD1E99A40ECA1FC797E6A36 /* MRJTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJTableView-umbrella.h"; sourceTree = "<group>"; };
 		570F694BA02AACCA9D4A97FFDB01E794 /* UIColor+Additions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions-dummy.m"; sourceTree = "<group>"; };
 		57E11BE485E70C0CF74F225B639DD8B8 /* MRJTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRJTableView-dummy.m"; sourceTree = "<group>"; };
@@ -260,7 +261,6 @@
 		EEA2C5F924DAAD60CE6E3CCFB4CDAD74 /* MRJCitySelect-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJCitySelect-prefix.pch"; sourceTree = "<group>"; };
 		F00690B8ED8CFEBFAE8E95B93A59FF5C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F20FCAE7D093218B9CDA9F936E9D2E31 /* MJExtension.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.xcconfig; sourceTree = "<group>"; };
-		F2B34FE1D13D48265CED25FA5D3872A8 /* city.json */ = {isa = PBXFileReference; includeInIndex = 1; name = city.json; path = MRJCitySelect/MRJResource/city.json; sourceTree = "<group>"; };
 		F41B0B308D14BC3A96BE6C94A47F73D0 /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
 		F48C23CFFDA065DA94FE9FDD24E91860 /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
 		FA57F7F751ED0FAF27E53EE7DFDA47D0 /* MRJCitySelect.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRJCitySelect.xcconfig; sourceTree = "<group>"; };
@@ -416,6 +416,14 @@
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
+		17B011F13FED8C4F4594D2B51137EF61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54B7BEB6DD168D6335E79E880AA271BD /* city.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		2BE2BB3B02B751F020FD177F56867464 /* Pods-MRJCitySelect_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,7 +516,7 @@
 				152DE52C5A4167B45610E51B9D171601 /* CityModelManger.m */,
 				B7D6378BA593BBE6E6B3AE0282A56012 /* CitySelectViewController.h */,
 				599CDF31DBF1577670D5ECFEFB5DC59E /* CitySelectViewController.m */,
-				BB9391B8FCF5603C741367418E1C7A72 /* Resources */,
+				17B011F13FED8C4F4594D2B51137EF61 /* Resources */,
 				04A905C42730CCD6D1B1CFB857379372 /* Support Files */,
 			);
 			name = MRJCitySelect;
@@ -533,14 +541,6 @@
 				2BE2BB3B02B751F020FD177F56867464 /* Pods-MRJCitySelect_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		BB9391B8FCF5603C741367418E1C7A72 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F2B34FE1D13D48265CED25FA5D3872A8 /* city.json */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		C7427C0DFD7DBDBC2593BD48F2DF0FC9 /* Products */ = {
@@ -911,7 +911,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7290457E7C19073A5B5CA903B527B473 /* city.json in Resources */,
+				46EFF3AC8417D5DBEF7DEDE8B4FDCCB5 /* city.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

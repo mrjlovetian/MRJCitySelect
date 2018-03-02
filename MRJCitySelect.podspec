@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'MRJCitySelect/Classes/**/*'
   
-  s.resource_bundles = {
-    'MRJCitySelect' => ['MRJCitySelect/MRJResource/*']
-  }
+# s.resource_bundles = {
+#   'MRJCitySelect' => ['MRJCitySelect/Assets/*']
+#}
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
