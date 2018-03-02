@@ -1,0 +1,6 @@
+framework module Pods_MRJCitySelect_Tests {
+  umbrella header "Pods-MRJCitySelect_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

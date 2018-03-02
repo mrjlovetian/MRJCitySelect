@@ -1,0 +1,6 @@
+framework module MRJCitySelect {
+  umbrella header "MRJCitySelect-umbrella.h"
+
+  export *
+  module * { export * }
+}

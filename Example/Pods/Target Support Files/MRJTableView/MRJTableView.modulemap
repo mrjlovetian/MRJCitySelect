@@ -1,0 +1,6 @@
+framework module MRJTableView {
+  umbrella header "MRJTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}

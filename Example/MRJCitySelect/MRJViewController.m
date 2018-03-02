@@ -7,6 +7,7 @@
 //
 
 #import "MRJViewController.h"
+#import "CitySelectViewController.h"
 
 @interface MRJViewController ()
 
@@ -17,7 +18,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(100, 100, 100, 30);
+    [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+    btn.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:btn];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)click {
+    CitySelectViewController *vc = [[CitySelectViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
+    vc.cityBlock = ^(CityModelManger *city) {
+        NSLog(@"-=-=-=-=-%@", city.regionName);
+    };
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,0 +1,6 @@
+framework module UIColor_Additions {
+  umbrella header "UIColor+Additions-umbrella.h"
+
+  export *
+  module * { export * }
+}

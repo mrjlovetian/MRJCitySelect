@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'MRJCitySelect'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of MRJCitySelect.'
+  s.summary          = '城市选择 MRJCitySelect.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,22 +21,24 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/mrjlovetian@gmail.com/MRJCitySelect'
+  s.homepage         = 'https://github.com/mrjlovetian/MRJCitySelect'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mrjlovetian@gmail.com' => 'mrjlovetian@gmail.com' }
-  s.source           = { :git => 'https://github.com/mrjlovetian@gmail.com/MRJCitySelect.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/mrjlovetian/MRJCitySelect.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'MRJCitySelect/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'MRJCitySelect' => ['MRJCitySelect/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'MRJCitySelect' => ['MRJCitySelect/MRJResource/*']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'MRJTableView'
+  s.dependency 'MJExtension'
+  s.dependency 'UIColor+Additions'
 end
