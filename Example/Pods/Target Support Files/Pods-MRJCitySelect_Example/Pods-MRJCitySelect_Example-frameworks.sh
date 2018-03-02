@@ -105,13 +105,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MRJCitySelect/MRJCitySelect.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MRJTableView/MRJTableView.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/UIColor+Additions/UIColor_Additions.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MRJUIColorAdditions/MRJUIColorAdditions.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MRJCitySelect/MRJCitySelect.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MRJTableView/MRJTableView.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/UIColor+Additions/UIColor_Additions.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MRJUIColorAdditions/MRJUIColorAdditions.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

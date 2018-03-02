@@ -10,8 +10,8 @@
 #endif
 #endif
 
-#import "UIColor+Additions.h"
+#import "UIColor+MRJAdditions.h"
 
-FOUNDATION_EXPORT double UIColor_AdditionsVersionNumber;
-FOUNDATION_EXPORT const unsigned char UIColor_AdditionsVersionString[];
+FOUNDATION_EXPORT double MRJUIColorAdditionsVersionNumber;
+FOUNDATION_EXPORT const unsigned char MRJUIColorAdditionsVersionString[];
 

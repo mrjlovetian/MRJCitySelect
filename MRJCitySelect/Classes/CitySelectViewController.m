@@ -10,7 +10,7 @@
 
 #import "BATableView.h"
 #import "MJExtension.h"
-#import "UIColor+Additions.h"
+#import "UIColor+MRJAdditions.h"
 
 #define MRJ_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 #define MRJ_SCREEN [[UIScreen mainScreen] bounds].size
@@ -55,10 +55,10 @@
     _searchBar.delegate = self;
     _searchBar.placeholder = @"搜索城市";
     UIView *bgdView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, MRJ_SCREEN.height, _searchBar.frame.size.height)];
-    bgdView.backgroundColor = [UIColor add_colorWithRGBHexString:@"efeff4"];
+    bgdView.backgroundColor = [UIColor colorWithHexString:@"efeff4"];
     bgdView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [_searchBar insertSubview:bgdView atIndex:1];
-    _searchBar.tintColor = [UIColor add_colorWithRGBHexString:@"0091e8"];
+    _searchBar.tintColor = [UIColor colorWithHexString:@"0091e8"];
     if (@available(iOS 11, *)) {
         UITextField *txfSearchField = [_searchBar valueForKey:@"_searchField"];
         [txfSearchField setDefaultTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13.5]}];
@@ -132,8 +132,8 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, MRJ_SCREEN.width, 24)];
     label.font = [UIFont systemFontOfSize:13];
-    label.backgroundColor = [UIColor add_colorWithRGBHexString:@"efeff4"];
-    label.textColor = [UIColor add_colorWithRGBHexString:@"999999"];
+    label.backgroundColor = [UIColor colorWithHexString:@"efeff4"];
+    label.textColor = [UIColor colorWithHexString:@"999999"];
     label.text = [NSString stringWithFormat:@"\t\t%@",_arrayKeys[section]];
     return label;
 }
@@ -163,7 +163,7 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellName];
         cell.accessoryType = UITableViewCellAccessoryNone;
-        cell.textLabel.textColor = [UIColor add_colorWithRGBHexString:@"333333"];
+        cell.textLabel.textColor = [UIColor colorWithHexString:@"333333"];
         cell.textLabel.font = [UIFont systemFontOfSize:16];
         cell.textLabel.frame = CGRectMake(15, cell.textLabel.frame.origin.y, cell.textLabel.frame.size.width, cell.textLabel.frame.size.height);
         UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, MRJ_SCREEN.width, 0.5)];
