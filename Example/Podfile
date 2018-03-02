@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MRJCitySelect_Example' do
+  pod 'MRJCitySelect', :path => '../'
+
+  target 'MRJCitySelect_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
