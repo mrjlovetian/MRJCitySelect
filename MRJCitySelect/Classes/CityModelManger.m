@@ -45,8 +45,7 @@
 }
 
 /// 城市按字母排序
-+ (void)sorterFromArray:(NSArray *)array success:(void (^)(NSArray *entryWords, NSDictionary *sorterArray))success
-{
++ (void)sorterFromArray:(NSArray *)array success:(void (^)(NSArray *entryWords, NSDictionary *sorterArray))success {
     NSMutableDictionary *sorterDic = [[NSMutableDictionary alloc]init];
     NSMutableArray *entryWords = [[NSMutableArray alloc]init];
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
