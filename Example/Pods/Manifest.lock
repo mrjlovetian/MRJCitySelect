@@ -5,7 +5,7 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - MJExtension (3.0.13)
-  - MRJCitySelect (0.1.2.1):
+  - MRJCitySelect (0.1.2.2):
     - MJExtension
     - MRJTableView
     - MRJUIColorAdditions
@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
-  MRJCitySelect: be7e484f24266b3e11364fca59d5c7fecba223a6
+  MRJCitySelect: c0bffea11518caac4dddd84a32478bb269662f75
   MRJTableView: 4caeceb4a4f5ce7609468221effe5b4125c51114
   MRJUIColorAdditions: a72dd04fb5d358f81fbd7eae8fc9da76b6f03590
 

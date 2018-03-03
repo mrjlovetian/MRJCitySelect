@@ -7,7 +7,7 @@
 //
 
 #import "CitySelectViewController.h"
-
+#import "CityHeadView.h"
 #import "BATableView.h"
 #import "MJExtension.h"
 #import "UIColor+MRJAdditions.h"
@@ -24,6 +24,7 @@
 @property (nonatomic, strong) NSDictionary *DataSource;
 @property (nonatomic, strong) NSMutableArray *arrayKeys;
 @property (nonatomic, strong) NSMutableArray *searchArray;
+@property (nonatomic, strong) CityHeadView *headView;
 
 @end
 
@@ -32,7 +33,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"城市选择";
+    [self.view addSubview:self.headView];
+    __weak typeof(self) weakSelf = self;
+    self.headView.handleBlock = ^{
+        [weakSelf goBack];
+    };
     
     NSURL *boundleUrl = [[NSBundle bundleForClass:[CitySelectViewController class]] URLForResource:@"MRJCitySelect" withExtension:@"bundle"];
     NSBundle *citysBundle = [NSBundle bundleWithURL:boundleUrl];
@@ -205,6 +210,19 @@ shouldReloadTableForSearchString:(NSString *)searchString {
         self.cityBlock(city);
         [self goBack];
     }
+}
+
+- (CityHeadView *)headView {
+    if (!_headView) {
+        _headView = [[CityHeadView alloc] initWithFrame:CGRectMake(0, 0, MRJ_SCREEN.width, MRJ_NavBAR_HEIGHT)];
+        _headView.backgroundColor = [UIColor whiteColor];
+    }
+    return _headView;
+}
+
+- (void)setNavTitle:(NSString *)navTitle {
+    _navTitle = [navTitle copy];
+    self.headView.titleStr = navTitle;
 }
 
 /*

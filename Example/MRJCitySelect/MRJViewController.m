@@ -29,6 +29,7 @@
 
 - (void)click {
     CitySelectViewController *vc = [[CitySelectViewController alloc] init];
+    vc.navTitle = @"选择城市";
     [self presentViewController:vc animated:YES completion:^{
         
     }];
