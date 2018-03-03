@@ -10,7 +10,7 @@
 
 @interface CityHeadView()
 
-@property (nonatomic, strong)UIButton *backBtn;
+
 @property (nonatomic, strong)UILabel *titleLab;
 @property (nonatomic, strong)UIView *bottomLine;
 
@@ -44,7 +44,7 @@
         _backBtn.frame = CGRectMake(0, 20, 50, 44);
         NSURL *boundleUrl = [[NSBundle bundleForClass:[CityHeadView class]] URLForResource:@"MRJCitySelect" withExtension:@"bundle"];
         NSBundle *citysBundle = [NSBundle bundleWithURL:boundleUrl];
-        [_backBtn setImage:[UIImage imageNamed:[citysBundle pathForResource:@"bar_back_blue" ofType:@"png"]] forState:UIControlStateNormal];
+        [_backBtn setImage:[UIImage imageNamed:[citysBundle pathForResource:@"city_bar_back_blue@2x" ofType:@"png"]] forState:UIControlStateNormal];
         _backBtn.contentMode = UIViewContentModeScaleAspectFit;
         [_backBtn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
     }

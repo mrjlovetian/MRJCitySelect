@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00AB56E09E3696094C2DF0472282B82F /* bar_back_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38030DB3688E6AE69254207D36AA9990 /* bar_back_blue@2x.png */; };
+		00AB56E09E3696094C2DF0472282B82F /* city_bar_back_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38030DB3688E6AE69254207D36AA9990 /* city_bar_back_blue@2x.png */; };
 		018B7FF14517FD429D2D5242B71213DE /* CityModelManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D38DEF02D7AF7DB5B321AC05487581A /* CityModelManger.m */; };
 		051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D7B7A95F8A439343C719FFFE433048 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		068F6DF04EF0371EEC29C6787B63910B /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C6351C0D4F16A16B5AB8BAE233FB62 /* NSObject+MJProperty.m */; };
@@ -23,7 +23,7 @@
 		20A943D2C814F40A1AF245657BB2E347 /* UIColor+MRJAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9B5805574D8322614548A6870BD7B /* UIColor+MRJAdditions.m */; };
 		21435E0B8DA36A9DD723A1ADD536125E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D79B6FE4F61D3965E3867B10711E552 /* Foundation.framework */; };
 		21E390702A2A184DB2A4388FB16C7C75 /* BATableViewIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8547066BD6520952CC21027B6AFE3A45 /* BATableViewIndex.m */; };
-		27C57F6DB72C1A19A721164A9620BD7F /* bar_back_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47998D027CF27358CF01ACFFC67848A1 /* bar_back_blue@3x.png */; };
+		27C57F6DB72C1A19A721164A9620BD7F /* city_bar_back_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47998D027CF27358CF01ACFFC67848A1 /* city_bar_back_blue@3x.png */; };
 		2E04F7FD19DB0B64EA10207786F864EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D79B6FE4F61D3965E3867B10711E552 /* Foundation.framework */; };
 		2F485B69F51E4F723A38410F31F08550 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A9CC719182EB0A5EFBAF02F585252D0 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30E941401A345F731718FD6CD9127D0E /* BATableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C3B2FC2C7454444BFC93CCF6467E065 /* BATableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -161,17 +161,17 @@
 		0883EF57F77D60F96776597F843FBDDF /* MRJUIColorAdditions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJUIColorAdditions-umbrella.h"; sourceTree = "<group>"; };
 		0C081DF782A85D304487C8579064AA8F /* Pods-MRJCitySelect_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRJCitySelect_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		0C3B2FC2C7454444BFC93CCF6467E065 /* BATableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BATableView.h; path = MRJTableView/Classes/BATableView.h; sourceTree = "<group>"; };
-		0ECEA73B0976B0B71BA4FB7E8B4852D2 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ECEA73B0976B0B71BA4FB7E8B4852D2 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F448C2645622CAD0447E14D60EC7178 /* MRJCitySelect-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJCitySelect-prefix.pch"; sourceTree = "<group>"; };
 		1105527C5B23D0EAE06EC999DF420800 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		11F6B2DB209C77AF8C9D3AA7E75FFB1D /* Pods-MRJCitySelect_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MRJCitySelect_Tests.modulemap"; sourceTree = "<group>"; };
+		11F6B2DB209C77AF8C9D3AA7E75FFB1D /* Pods-MRJCitySelect_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MRJCitySelect_Tests.modulemap"; sourceTree = "<group>"; };
 		12A169A927CBC30FDD60F6ED7F0A064C /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12C83F3C02A8DA1007A13F05F72A2EA9 /* MRJCitySelect-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRJCitySelect-dummy.m"; sourceTree = "<group>"; };
 		1342C668BF7B1B839E7A09540171B14A /* Pods-MRJCitySelect_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRJCitySelect_Tests-dummy.m"; sourceTree = "<group>"; };
 		1B8B43871A07EFFAA3AF4E4D45E7504B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1E02566DEA823BB97EDF9263BBA10F1E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21263DF9C5A05FF9303424463F8A17DE /* CitySelectViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CitySelectViewController.m; path = MRJCitySelect/Classes/CitySelectViewController.m; sourceTree = "<group>"; };
-		2800921069CD5A07AD27BFFD4E15F583 /* city.json */ = {isa = PBXFileReference; includeInIndex = 1; name = city.json; path = MRJCitySelect/Assets/city.json; sourceTree = "<group>"; };
+		2800921069CD5A07AD27BFFD4E15F583 /* city.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = city.json; path = MRJCitySelect/Assets/city.json; sourceTree = "<group>"; };
 		2808E005301D5040E49E3B014B504712 /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
 		2A687BC644B86D9749391BE48690621C /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
 		2CDDB3077F91DE93EFB0A6A4084D159E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -181,12 +181,12 @@
 		31AE936B3676A4B17485029836C294E6 /* MRJTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRJTableView-dummy.m"; sourceTree = "<group>"; };
 		359C0E7259E790837F22D3ECF76542B5 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		37BDAE6901642FE2B9E96A73A9F3F315 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
-		38030DB3688E6AE69254207D36AA9990 /* bar_back_blue@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "bar_back_blue@2x.png"; path = "MRJCitySelect/Assets/bar_back_blue@2x.png"; sourceTree = "<group>"; };
+		38030DB3688E6AE69254207D36AA9990 /* city_bar_back_blue@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "city_bar_back_blue@2x.png"; path = "MRJCitySelect/Assets/city_bar_back_blue@2x.png"; sourceTree = "<group>"; };
 		3B04F21FAA244F41D720820D4CB388E7 /* Pods-MRJCitySelect_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRJCitySelect_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		3F9B6E75D9A1C5AF791AC80D3E06289C /* Pods-MRJCitySelect_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MRJCitySelect_Example-umbrella.h"; sourceTree = "<group>"; };
 		401326C82D45A700ECF0D4F8DDF689B8 /* Pods-MRJCitySelect_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRJCitySelect_Example-frameworks.sh"; sourceTree = "<group>"; };
 		41795AE6D548F0E06595A437E150C33B /* Pods-MRJCitySelect_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRJCitySelect_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		47998D027CF27358CF01ACFFC67848A1 /* bar_back_blue@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "bar_back_blue@3x.png"; path = "MRJCitySelect/Assets/bar_back_blue@3x.png"; sourceTree = "<group>"; };
+		47998D027CF27358CF01ACFFC67848A1 /* city_bar_back_blue@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "city_bar_back_blue@3x.png"; path = "MRJCitySelect/Assets/city_bar_back_blue@3x.png"; sourceTree = "<group>"; };
 		4A90652F3A19D373F16B3CDAA219E9BB /* MRJTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJTableView-prefix.pch"; sourceTree = "<group>"; };
 		4D1F840C02E042DAF332EC9B00DC4BA3 /* MRJUIColorAdditions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRJUIColorAdditions-dummy.m"; sourceTree = "<group>"; };
 		5258AE69AEA2DD023DBA74434C18AB2B /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 		71F2D0C14001C0B9312E656DEF24A2BC /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
 		726817D7332F6110A7E9094C97D6982F /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
 		74F3BE5E114556B025DDC6B4FDB778D5 /* Pods-MRJCitySelect_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRJCitySelect_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		793EBA5857888C5AA45C760AD29EFA32 /* MRJCitySelect.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MRJCitySelect.modulemap; sourceTree = "<group>"; };
+		793EBA5857888C5AA45C760AD29EFA32 /* MRJCitySelect.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MRJCitySelect.modulemap; sourceTree = "<group>"; };
 		79770FA96F67CD43B60EB6D2E5C65D23 /* Pods-MRJCitySelect_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRJCitySelect_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		79D577C1638903A504C3B03682485DAD /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
 		7B56F62A2338FA18848A5247815F1871 /* MJExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJExtension-dummy.m"; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 		82DC59D12A4469E02DCE55C821634BBF /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		8547066BD6520952CC21027B6AFE3A45 /* BATableViewIndex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BATableViewIndex.m; path = MRJTableView/Classes/BATableViewIndex.m; sourceTree = "<group>"; };
 		86C6351C0D4F16A16B5AB8BAE233FB62 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
-		8766E73C2A2D7F356D89D21AC6A9AF80 /* MRJUIColorAdditions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MRJUIColorAdditions.modulemap; sourceTree = "<group>"; };
+		8766E73C2A2D7F356D89D21AC6A9AF80 /* MRJUIColorAdditions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MRJUIColorAdditions.modulemap; sourceTree = "<group>"; };
 		88763BB00DBF31000C0203E445330D9B /* Pods-MRJCitySelect_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRJCitySelect_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		8CC74666AC396CB307600701640E7504 /* Pods-MRJCitySelect_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRJCitySelect_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8CF28A4BB115D118979E83E947263272 /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
@@ -225,14 +225,14 @@
 		8F95A96BB028A887E9E5693ADED9DB7D /* MRJTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRJTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C5F0BB57E36D82EB4CB598713DD537 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		926146A288F44A250E38999AA1A77640 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96C575D7006F1211D00E05742114488E /* MJExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-umbrella.h"; sourceTree = "<group>"; };
-		9874E4306BB3677D41AEDFD28AA6C0A3 /* MRJCitySelect.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MRJCitySelect.bundle; path = MRJCitySelect.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9874E4306BB3677D41AEDFD28AA6C0A3 /* MRJCitySelect.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MRJCitySelect.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		989573C89591C8DD517EFBCB28037265 /* ResourceBundle-MRJCitySelect-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MRJCitySelect-Info.plist"; sourceTree = "<group>"; };
 		9C5DE9CECB8552D283B6C5E77CB41774 /* MRJUIColorAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRJUIColorAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D2FCFF87B09AF8AA17B5DA381D4AE3 /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
 		A91F5CB5E21FEE047AE9EA980C740205 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
-		ACFF6D051316979D894DCF699266967D /* Pods_MRJCitySelect_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MRJCitySelect_Example.framework; path = "Pods-MRJCitySelect_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACFF6D051316979D894DCF699266967D /* Pods_MRJCitySelect_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRJCitySelect_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1EB72484E69D049BF3DF8E97A9F66FE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3B22486A039CD57507E0863C62D3370 /* MRJTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRJTableView.xcconfig; sourceTree = "<group>"; };
 		B4C3E4BAFADD3731AAD5C5F83DA5F549 /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
@@ -241,9 +241,9 @@
 		C3F70814A861EA7FC5741D8431D638F6 /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
 		C4FDA976FFE552DAD8687E2C6B383882 /* MRJTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJTableView-umbrella.h"; sourceTree = "<group>"; };
 		C5681E76C256166A13AB4D67F7B6B630 /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
-		C6CD6238FE0283B5FCAA48176B86E435 /* MJExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MJExtension.modulemap; sourceTree = "<group>"; };
+		C6CD6238FE0283B5FCAA48176B86E435 /* MJExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MJExtension.modulemap; sourceTree = "<group>"; };
 		C88BDB7FD9D08BE56C34CD11F9A29B0F /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
-		CAE64D52EA0AB99148BE728F36809CBF /* Pods-MRJCitySelect_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MRJCitySelect_Example.modulemap"; sourceTree = "<group>"; };
+		CAE64D52EA0AB99148BE728F36809CBF /* Pods-MRJCitySelect_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MRJCitySelect_Example.modulemap"; sourceTree = "<group>"; };
 		CC31D1C7BAD4F83813F84EC2116C2E0C /* BATableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BATableView.m; path = MRJTableView/Classes/BATableView.m; sourceTree = "<group>"; };
 		CC69803E2A77B1561A331611351DEBED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD98D8D0BBF43C2404A714436E1D5798 /* UIColor+MRJAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+MRJAdditions.h"; path = "MRJUIColorAdditions/Classes/UIColor+MRJAdditions.h"; sourceTree = "<group>"; };
@@ -251,16 +251,16 @@
 		CFAA247C922238C49603C23085A4C4FE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00C740B490F3854A01A65F386E131D3 /* CityModelManger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CityModelManger.h; path = MRJCitySelect/Classes/CityModelManger.h; sourceTree = "<group>"; };
 		D2AEC3618E1CC22D7DD50AB1D900F3EA /* NSObject+MJClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJClass.m"; path = "MJExtension/NSObject+MJClass.m"; sourceTree = "<group>"; };
-		D4A2C16608FC76278C97B5917B676FB9 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		D5E4A47ED24C5B928048407F7AC7ED8C /* MRJCitySelect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MRJCitySelect.framework; path = MRJCitySelect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAD044D24EB47D71D28AA046AEB934D4 /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJExtension.framework; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBF301D342BADF5CA204C7F31018F4DE /* MRJUIColorAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MRJUIColorAdditions.framework; path = MRJUIColorAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A2C16608FC76278C97B5917B676FB9 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		D5E4A47ED24C5B928048407F7AC7ED8C /* MRJCitySelect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRJCitySelect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD044D24EB47D71D28AA046AEB934D4 /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBF301D342BADF5CA204C7F31018F4DE /* MRJUIColorAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRJUIColorAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE03A7DEB3BC40689F09B16382294AFF /* MJExtension.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.xcconfig; sourceTree = "<group>"; };
 		E1D920D03FB5D36FC0CB432D49D86C76 /* MRJUIColorAdditions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRJUIColorAdditions.xcconfig; sourceTree = "<group>"; };
-		E29CA3712D741DC57645F3D56958138B /* MRJTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MRJTableView.framework; path = MRJTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E29CA3712D741DC57645F3D56958138B /* MRJTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRJTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E5508D7C0238D6C689122F9741C044 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6C7F1AD9261EE1E884A39EC4741286D /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
-		E7FD6ED40D25CDF1A06094B365CAE56E /* MRJTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MRJTableView.modulemap; sourceTree = "<group>"; };
+		E7FD6ED40D25CDF1A06094B365CAE56E /* MRJTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MRJTableView.modulemap; sourceTree = "<group>"; };
 		EC906CDBC5F57F1C43436EB2167CC768 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		EDB9B0C4CEA1636D3A9D1A7DDEE7F47F /* MRJCitySelect-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJCitySelect-umbrella.h"; sourceTree = "<group>"; };
 		F000DD6A3833FE15CAE2697200CFCCFB /* CitySelectViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CitySelectViewController.h; path = MRJCitySelect/Classes/CitySelectViewController.h; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 		F5B94AFE1CAD01F9926BE4298EEFA426 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		F7E524B049BCF66A2A0AE5E5B31BAB57 /* NSObject+MJClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJClass.h"; path = "MJExtension/NSObject+MJClass.h"; sourceTree = "<group>"; };
 		FA6A239B4834B4C5CC7A3532015F61E5 /* Pods-MRJCitySelect_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRJCitySelect_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FB528E98D5BE999B9A85BCCDBE006A05 /* Pods_MRJCitySelect_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MRJCitySelect_Tests.framework; path = "Pods-MRJCitySelect_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB528E98D5BE999B9A85BCCDBE006A05 /* Pods_MRJCitySelect_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRJCitySelect_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBD9B5805574D8322614548A6870BD7B /* UIColor+MRJAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MRJAdditions.m"; path = "MRJUIColorAdditions/Classes/UIColor+MRJAdditions.m"; sourceTree = "<group>"; };
 		FDB6EC192D5E0B01030F1E29F45FEFEA /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = MJExtension/MJFoundation.h; sourceTree = "<group>"; };
 		FDC661202FE211D3499986DED823AB1C /* MRJCitySelect.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRJCitySelect.xcconfig; sourceTree = "<group>"; };
@@ -414,15 +414,14 @@
 				8547066BD6520952CC21027B6AFE3A45 /* BATableViewIndex.m */,
 				6BCD2C2DEA07FB59632BF711623980F6 /* Support Files */,
 			);
-			name = MRJTableView;
 			path = MRJTableView;
 			sourceTree = "<group>";
 		};
 		4489BF9665D600972F7B1DA3BB04160B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				38030DB3688E6AE69254207D36AA9990 /* bar_back_blue@2x.png */,
-				47998D027CF27358CF01ACFFC67848A1 /* bar_back_blue@3x.png */,
+				38030DB3688E6AE69254207D36AA9990 /* city_bar_back_blue@2x.png */,
+				47998D027CF27358CF01ACFFC67848A1 /* city_bar_back_blue@3x.png */,
 				2800921069CD5A07AD27BFFD4E15F583 /* city.json */,
 			);
 			name = Resources;
@@ -473,7 +472,6 @@
 				3A96BE8D6A8C85EBF9CCEBA8A1A56F44 /* Support Files */,
 				4927078093B4A46BE92360FE2532316A /* SwiftSupport */,
 			);
-			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
@@ -517,7 +515,6 @@
 				79D577C1638903A504C3B03682485DAD /* NSString+MJExtension.m */,
 				59E99B3302B6316704E36DBFC8029E99 /* Support Files */,
 			);
-			name = MJExtension;
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
@@ -598,7 +595,6 @@
 				FBD9B5805574D8322614548A6870BD7B /* UIColor+MRJAdditions.m */,
 				1BD5672ED0A0888B5F6169E178C0CF52 /* Support Files */,
 			);
-			name = MRJUIColorAdditions;
 			path = MRJUIColorAdditions;
 			sourceTree = "<group>";
 		};
@@ -930,8 +926,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00AB56E09E3696094C2DF0472282B82F /* bar_back_blue@2x.png in Resources */,
-				27C57F6DB72C1A19A721164A9620BD7F /* bar_back_blue@3x.png in Resources */,
+				00AB56E09E3696094C2DF0472282B82F /* city_bar_back_blue@2x.png in Resources */,
+				27C57F6DB72C1A19A721164A9620BD7F /* city_bar_back_blue@3x.png in Resources */,
 				62C55866D71D3F784E6486F1B2D18C06 /* city.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

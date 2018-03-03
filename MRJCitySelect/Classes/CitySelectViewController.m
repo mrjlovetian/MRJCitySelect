@@ -225,6 +225,11 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     self.headView.titleStr = navTitle;
 }
 
+- (void)setBackImage:(UIImage *)backImage {
+    _backImage = backImage;
+    [_headView.backBtn setImage:backImage forState:UIControlStateNormal];
+}
+
 /*
 #pragma mark - Navigation
 
