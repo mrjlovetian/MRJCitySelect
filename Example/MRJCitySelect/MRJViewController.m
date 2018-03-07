@@ -9,7 +9,7 @@
 #import "MRJViewController.h"
 #import "CitySelectViewController.h"
 
-@interface MRJViewController ()
+@interface MRJViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -28,13 +28,52 @@
 }
 
 - (void)click {
-    CitySelectViewController *vc = [[CitySelectViewController alloc] init];
-    [self presentViewController:vc animated:YES completion:^{
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.allowsEditing = YES;
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:picker animated:YES completion:nil];
+    
+    return;
+//    CitySelectViewController *vc = [[CitySelectViewController alloc] init];
+//    [self presentViewController:vc animated:YES completion:^{
+//
+//    }];
+//    vc.cityBlock = ^(CityModelManger *city) {
+//        NSLog(@"-=-=-=-=-%@", city.regionName);
+//    };
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+//    UIImage *image = [info objectForKey:_isEdit?UIImagePickerControllerEditedImage:UIImagePickerControllerOriginalImage];
+//    if (image) {
+//        [picker dismissViewControllerAnimated:YES completion:^{
+//            UIImage *newImage = [self imageWithImage:image];
+//            if (self.type == CameraToolDefault) {
+//                if (self.CompleteChooseCallback) {
+//                    self.CompleteChooseCallback(newImage);
+//                }
+//            }
+//            else if (self.type == CameraToolCustomize) {
+//                if (self.photosCompleteChooseCallback) {
+//                    self.photosCompleteChooseCallback(@[newImage]);
+//                }
+//            }
+//
+//            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+//        }];
+//    }
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker;
+{
+    [picker dismissViewControllerAnimated:YES completion:^{
         
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     }];
-    vc.cityBlock = ^(CityModelManger *city) {
-        NSLog(@"-=-=-=-=-%@", city.regionName);
-    };
 }
 
 - (void)didReceiveMemoryWarning

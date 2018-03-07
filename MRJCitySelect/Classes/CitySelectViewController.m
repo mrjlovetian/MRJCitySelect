@@ -32,8 +32,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"城市选择";
-    
     NSURL *boundleUrl = [[NSBundle bundleForClass:[CitySelectViewController class]] URLForResource:@"MRJCitySelect" withExtension:@"bundle"];
     NSBundle *citysBundle = [NSBundle bundleWithURL:boundleUrl];
     NSData *data = [[NSData alloc] initWithContentsOfFile:[citysBundle pathForResource:@"city" ofType:@"json"]];
@@ -84,6 +82,7 @@
 }
 
 #pragma mark - UISearchDisplayController delegate methods
+
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -96,7 +95,7 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     return YES;
 }
 
-- (void)filterContentForSearchText:(NSString*)searchText scope:(NSInteger )scopeOption {
+- (void)filterContentForSearchText:(NSString *)searchText scope:(NSInteger )scopeOption {
     [self.searchArray removeAllObjects];
     NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[cd] %@",searchText];
     for (NSArray *array in self.DataSource.allValues) {
