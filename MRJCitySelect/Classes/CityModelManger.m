@@ -7,8 +7,11 @@
 //
 
 #import "CityModelManger.h"
+#import "MJExtension.h"
 
 @implementation CityModelManger
+
+MJExtensionCodingImplementation
 
 //检测字母的读音是否
 + (NSString *)phonetic:(NSString *)sourceString {
@@ -68,12 +71,46 @@
             return [obj1 compare:obj2 options:NSNumericSearch];
         }];
         
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [self saveAllCity:resultkArrSort];
+            [self saveAllSortCity:sorterDic];
+        });
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             if (success) {
                 success(resultkArrSort,[NSDictionary dictionaryWithDictionary:sorterDic]);
             }
         });
     });
+}
+
++ (void)saveAllCity:(NSArray *)citys {
+    NSInteger version = [[ [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] stringByReplacingOccurrencesOfString:@"." withString:@""] integerValue];
+    [[NSUserDefaults standardUserDefaults] setObject:@(version) forKey:@"version"];
+    NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
+    NSString *pathFile = [cachefile stringByAppendingPathComponent:@"citys.json"];  //要保存的文件名
+    [citys writeToFile:pathFile atomically:YES];  //写入文件
+}
+
++ (NSArray *)getAllCitys {
+    NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
+    NSString *pathFile = [cachefile stringByAppendingPathComponent:@"citys.json"];
+    NSArray *arr = [NSArray arrayWithContentsOfFile:pathFile];
+    return arr;
+}
+
++ (void)saveAllSortCity:(NSDictionary *)sortCity {
+    NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
+    NSString *pathFile = [cachefile stringByAppendingPathComponent:@"sortCity.data"];  //要保存的文件名
+    // Encoding
+    [NSKeyedArchiver archiveRootObject:sortCity toFile:pathFile];
+}
+
++ (NSDictionary *)getAllSortCity {
+    NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
+    NSString *pathFile = [cachefile stringByAppendingPathComponent:@"sortCity.data"];
+    NSDictionary *sortCity = [NSKeyedUnarchiver unarchiveObjectWithFile:pathFile];
+    return sortCity;
 }
 
 @end

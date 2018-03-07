@@ -44,12 +44,16 @@
     NSData *data = [[NSData alloc] initWithContentsOfFile:[citysBundle pathForResource:@"city" ofType:@"json"]];
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     NSArray *arr = [CityModelManger mj_objectArrayWithKeyValuesArray:dic[@"Data"]];
-    [CityModelManger sorterFromArray:arr success:^(NSArray *entryWords, NSDictionary *sorterArray) {
-        _arrayKeys = [[NSMutableArray alloc] initWithCapacity:1];
-        [_arrayKeys addObjectsFromArray:entryWords];
-        self.DataSource = sorterArray;
-        [self.contactTableView reloadData];
-    }];
+    
+    NSInteger version = [[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] stringByReplacingOccurrencesOfString:@"." withString:@""] integerValue];
+    if ([CityModelManger getAllCitys].count == 0 || version > [[[NSUserDefaults standardUserDefaults] objectForKey:@"version"] integerValue]) {
+        [CityModelManger sorterFromArray:arr success:^(NSArray *entryWords, NSDictionary *sorterArray) {
+             [self reloadCity:entryWords sortArray:sorterArray];
+        }];
+    } else {
+        [self reloadCity:[CityModelManger getAllCitys] sortArray:[CityModelManger getAllSortCity]];
+    }
+    
     
     self.contactTableView = [[BATableView alloc]initWithFrame:CGRectMake(0, MRJ_NavBAR_HEIGHT + 56 , MRJ_SCREEN.width, MRJ_SCREEN.height - MRJ_NavBAR_HEIGHT - 56)];
     self.contactTableView.delegate = self;
@@ -76,6 +80,15 @@
     _searchDisPlayCon.searchResultsDataSource = self;
     _searchDisPlayCon.searchResultsDelegate = self;
     self.searchArray = [[NSMutableArray alloc] initWithCapacity:1];
+}
+
+- (void)reloadCity:(NSArray *)entryWords sortArray:(NSDictionary *)sorterArray {
+    _arrayKeys = [[NSMutableArray alloc]initWithObjects:nil];
+    
+    [_arrayKeys addObjectsFromArray:entryWords];
+    self.DataSource = sorterArray;
+    
+    [self.contactTableView reloadData];
 }
 
 - (void)goBack {
