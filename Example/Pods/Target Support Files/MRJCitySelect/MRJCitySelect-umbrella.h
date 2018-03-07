@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "CityHeadView.h"
 #import "CityModelManger.h"
 #import "CitySelectViewController.h"
 

@@ -7,7 +7,7 @@
 //
 
 #import "CitySelectViewController.h"
-
+#import "CityHeadView.h"
 #import "BATableView.h"
 #import "MJExtension.h"
 #import "UIColor+MRJAdditions.h"
@@ -24,6 +24,7 @@
 @property (nonatomic, strong) NSDictionary *DataSource;
 @property (nonatomic, strong) NSMutableArray *arrayKeys;
 @property (nonatomic, strong) NSMutableArray *searchArray;
+@property (nonatomic, strong) CityHeadView *headView;
 
 @end
 
@@ -31,6 +32,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.view addSubview:self.headView];
+    __weak typeof(self) weakSelf = self;
+    self.headView.handleBlock = ^{
+        [weakSelf goBack];
+    };
     
     NSURL *boundleUrl = [[NSBundle bundleForClass:[CitySelectViewController class]] URLForResource:@"MRJCitySelect" withExtension:@"bundle"];
     NSBundle *citysBundle = [NSBundle bundleWithURL:boundleUrl];
@@ -69,8 +76,6 @@
     _searchDisPlayCon.searchResultsDataSource = self;
     _searchDisPlayCon.searchResultsDelegate = self;
     self.searchArray = [[NSMutableArray alloc] initWithCapacity:1];
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)goBack {
@@ -157,8 +162,8 @@ shouldReloadTableForSearchString:(NSString *)searchString {
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString * cellName = @"CityListTableViewCell";
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellName];
+    static NSString *cellName = @"CityListTableViewCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellName];
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -185,7 +190,6 @@ shouldReloadTableForSearchString:(NSString *)searchString {
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Kid  城市id
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     CityModelManger *city = nil;
     if ([tableView isEqual:_searchDisPlayCon.searchResultsTableView]) {
@@ -204,6 +208,26 @@ shouldReloadTableForSearchString:(NSString *)searchString {
         self.cityBlock(city);
         [self goBack];
     }
+}
+
+#pragma mark UI
+
+- (CityHeadView *)headView {
+    if (!_headView) {
+        _headView = [[CityHeadView alloc] initWithFrame:CGRectMake(0, 0, MRJ_SCREEN.width, MRJ_NavBAR_HEIGHT)];
+        _headView.backgroundColor = [UIColor whiteColor];
+    }
+    return _headView;
+}
+
+- (void)setNavTitle:(NSString *)navTitle {
+    _navTitle = [navTitle copy];
+    self.headView.titleStr = navTitle;
+}
+
+- (void)setBackImage:(UIImage *)backImage {
+    _backImage = backImage;
+    [_headView.backBtn setImage:backImage forState:UIControlStateNormal];
 }
 
 /*

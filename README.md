@@ -7,7 +7,22 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+### 效果图
+![](main.png)
+
+![](ysearch.png)
+
+![](search.png)
+
+### 如何使用
+
+```
+CitySelectViewController *vc = [[CitySelectViewController alloc] init];
+        vc.navTitle = @"城市选择";
+        vc.cityBlock = ^(CityModelManger *city) {
+            MRJLog(@"选择的城市是%@", city.regionName);
+        };
+```
 
 ## Requirements
 
@@ -27,3 +42,5 @@ mrjlovetian@gmail.com, mrjlovetian@gmail.com
 ## License
 
 MRJCitySelect is available under the MIT license. See the LICENSE file for more info.
+
+

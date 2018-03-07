@@ -22,4 +22,7 @@ typedef void(^CitySelectBlock)(CityModelManger *city);
 @property (nonatomic, weak) id <SelectCityListVCDelegate>delegate;
 @property (nonatomic, copy) CitySelectBlock cityBlock;
 
+@property (nonatomic, copy) NSString *navTitle;
+@property (nonatomic, strong) UIImage *backImage;
+
 @end
