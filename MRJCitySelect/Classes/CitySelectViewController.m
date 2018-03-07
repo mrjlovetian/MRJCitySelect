@@ -32,54 +32,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self initUI];
+    [self getData];
+}
+
+- (void)initUI {
     [self.view addSubview:self.headView];
+    [self.view addSubview:self.contactTableView];
+    [self.view addSubview:self.searchBar];
+    [self setSearchDisPlayCon:self.searchDisPlayCon];
+    self.searchArray = [[NSMutableArray alloc] initWithCapacity:1];
     __weak typeof(self) weakSelf = self;
     self.headView.handleBlock = ^{
         [weakSelf goBack];
     };
-    
-    NSURL *boundleUrl = [[NSBundle bundleForClass:[CitySelectViewController class]] URLForResource:@"MRJCitySelect" withExtension:@"bundle"];
-    NSBundle *citysBundle = [NSBundle bundleWithURL:boundleUrl];
-    NSData *data = [[NSData alloc] initWithContentsOfFile:[citysBundle pathForResource:@"city" ofType:@"json"]];
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    NSArray *arr = [CityModelManger mj_objectArrayWithKeyValuesArray:dic[@"Data"]];
-    
+}
+
+- (void)getData {
     NSInteger version = [[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] stringByReplacingOccurrencesOfString:@"." withString:@""] integerValue];
     if ([CityModelManger getAllCitys].count == 0 || version > [[[NSUserDefaults standardUserDefaults] objectForKey:@"version"] integerValue]) {
+        NSURL *boundleUrl = [[NSBundle bundleForClass:[CitySelectViewController class]] URLForResource:@"MRJCitySelect" withExtension:@"bundle"];
+        NSBundle *citysBundle = [NSBundle bundleWithURL:boundleUrl];
+        NSData *data = [[NSData alloc] initWithContentsOfFile:[citysBundle pathForResource:@"city" ofType:@"json"]];
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        NSArray *arr = [CityModelManger mj_objectArrayWithKeyValuesArray:dic[@"Data"]];
         [CityModelManger sorterFromArray:arr success:^(NSArray *entryWords, NSDictionary *sorterArray) {
-             [self reloadCity:entryWords sortArray:sorterArray];
+            [self reloadCity:entryWords sortArray:sorterArray];
         }];
     } else {
         [self reloadCity:[CityModelManger getAllCitys] sortArray:[CityModelManger getAllSortCity]];
     }
-    
-    
-    self.contactTableView = [[BATableView alloc]initWithFrame:CGRectMake(0, MRJ_NavBAR_HEIGHT + 56 , MRJ_SCREEN.width, MRJ_SCREEN.height - MRJ_NavBAR_HEIGHT - 56)];
-    self.contactTableView.delegate = self;
-    self.contactTableView.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.view addSubview:_contactTableView];
-    
-    _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, MRJ_NavBAR_HEIGHT, MRJ_SCREEN.width, 28)];
-    _searchBar.delegate = self;
-    _searchBar.placeholder = @"搜索城市";
-    UIView *bgdView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, MRJ_SCREEN.height, _searchBar.frame.size.height)];
-    bgdView.backgroundColor = [UIColor colorWithHexString:@"efeff4"];
-    bgdView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [_searchBar insertSubview:bgdView atIndex:1];
-    _searchBar.tintColor = [UIColor colorWithHexString:@"0091e8"];
-    if (@available(iOS 11, *)) {
-        UITextField *txfSearchField = [_searchBar valueForKey:@"_searchField"];
-        [txfSearchField setDefaultTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13.5]}];
-    }
-    [self.view addSubview:_searchBar];
-    
-    _searchDisPlayCon = [[UISearchDisplayController alloc] initWithSearchBar:_searchBar contentsController:self];
-    _searchDisPlayCon.delegate = self;
-    [self setSearchDisPlayCon:_searchDisPlayCon];
-    _searchDisPlayCon.searchResultsDataSource = self;
-    _searchDisPlayCon.searchResultsDelegate = self;
-    self.searchArray = [[NSMutableArray alloc] initWithCapacity:1];
 }
 
 - (void)reloadCity:(NSArray *)entryWords sortArray:(NSDictionary *)sorterArray {
@@ -232,6 +214,45 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     }
     return _headView;
 }
+
+- (BATableView *)contactTableView {
+    if (!_contactTableView) {
+        _contactTableView = [[BATableView alloc]initWithFrame:CGRectMake(0, MRJ_NavBAR_HEIGHT + 56 , MRJ_SCREEN.width, MRJ_SCREEN.height - MRJ_NavBAR_HEIGHT - 56)];
+        _contactTableView.delegate = self;
+        _contactTableView.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    }
+    return _contactTableView;
+}
+
+- (UISearchBar *)searchBar {
+    if (!_searchBar) {
+        _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, MRJ_NavBAR_HEIGHT, MRJ_SCREEN.width, 28)];
+        _searchBar.delegate = self;
+        _searchBar.placeholder = @"搜索城市";
+        UIView *bgdView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, MRJ_SCREEN.height, _searchBar.frame.size.height)];
+        bgdView.backgroundColor = [UIColor colorWithHexString:@"efeff4"];
+        bgdView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        [_searchBar insertSubview:bgdView atIndex:1];
+        _searchBar.tintColor = [UIColor colorWithHexString:@"0091e8"];
+        if (@available(iOS 11, *)) {
+            UITextField *txfSearchField = [_searchBar valueForKey:@"_searchField"];
+            [txfSearchField setDefaultTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13.5]}];
+        }
+    }
+    return _searchBar;
+}
+
+- (UISearchDisplayController *)searchDisPlayCon {
+    if (!_searchDisPlayCon) {
+        _searchDisPlayCon = [[UISearchDisplayController alloc] initWithSearchBar:_searchBar contentsController:self];
+        _searchDisPlayCon.delegate = self;
+        _searchDisPlayCon.searchResultsDataSource = self;
+        _searchDisPlayCon.searchResultsDelegate = self;
+    }
+    return _searchDisPlayCon;
+}
+
+#pragma mark Set
 
 - (void)setNavTitle:(NSString *)navTitle {
     _navTitle = [navTitle copy];
