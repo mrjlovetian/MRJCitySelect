@@ -88,27 +88,27 @@ MJExtensionCodingImplementation
     NSInteger version = [[ [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] stringByReplacingOccurrencesOfString:@"." withString:@""] integerValue];
     [[NSUserDefaults standardUserDefaults] setObject:@(version) forKey:@"version"];
     NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
-    NSString *pathFile = [cachefile stringByAppendingPathComponent:@"citys.json"];  //要保存的文件名
+    NSString *pathFile = [cachefile stringByAppendingPathComponent:@"mrj_citys.json"];  //要保存的文件名
     [citys writeToFile:pathFile atomically:YES];  //写入文件
 }
 
 + (NSArray *)getAllCitys {
     NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
-    NSString *pathFile = [cachefile stringByAppendingPathComponent:@"citys.json"];
+    NSString *pathFile = [cachefile stringByAppendingPathComponent:@"mrj_citys.json"];
     NSArray *arr = [NSArray arrayWithContentsOfFile:pathFile];
     return arr;
 }
 
 + (void)saveAllSortCity:(NSDictionary *)sortCity {
     NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
-    NSString *pathFile = [cachefile stringByAppendingPathComponent:@"sortCity.data"];  //要保存的文件名
+    NSString *pathFile = [cachefile stringByAppendingPathComponent:@"mrj_sortCity.data"];  //要保存的文件名
     // Encoding
     [NSKeyedArchiver archiveRootObject:sortCity toFile:pathFile];
 }
 
 + (NSDictionary *)getAllSortCity {
     NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
-    NSString *pathFile = [cachefile stringByAppendingPathComponent:@"sortCity.data"];
+    NSString *pathFile = [cachefile stringByAppendingPathComponent:@"mrj_sortCity.data"];
     NSDictionary *sortCity = [NSKeyedUnarchiver unarchiveObjectWithFile:pathFile];
     return sortCity;
 }
