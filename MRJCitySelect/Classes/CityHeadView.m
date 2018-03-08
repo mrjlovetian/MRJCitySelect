@@ -10,9 +10,8 @@
 
 @interface CityHeadView()
 
-
-@property (nonatomic, strong)UILabel *titleLab;
-@property (nonatomic, strong)UIView *bottomLine;
+@property (nonatomic, strong) UILabel *titleLab;
+@property (nonatomic, strong) CALayer *bottomLine;
 
 @end
 
@@ -29,7 +28,7 @@
 - (void)initUI {
     [self addSubview:self.backBtn];
     [self addSubview:self.titleLab];
-    [self addSubview:self.bottomLine];
+    [self.layer addSublayer:self.bottomLine];
 }
 
 - (void)goBack {
@@ -61,10 +60,11 @@
     return _titleLab;
 }
 
-- (UIView *)bottomLine {
+- (CALayer *)bottomLine {
     if (!_bottomLine) {
-        _bottomLine = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 0.5, [UIScreen mainScreen].bounds.size.width, 0.5)];
-        _bottomLine.backgroundColor = [UIColor colorWithHexString:@"e5e5e5"];
+        _bottomLine = [CALayer layer];
+        _bottomLine.frame = CGRectMake(0, self.frame.size.height - 0.5, [UIScreen mainScreen].bounds.size.width, 0.5);
+        _bottomLine.backgroundColor = [UIColor colorWithHexString:@"e5e5e5"].CGColor;
     }
     return _bottomLine;
 }

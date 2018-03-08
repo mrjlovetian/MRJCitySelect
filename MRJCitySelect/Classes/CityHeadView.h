@@ -7,15 +7,15 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^HeardViewHandle)();
+typedef void(^HeardViewHandle)(void);
 
 @interface CityHeadView : UIView
 
-@property (nonatomic, copy)HeardViewHandle handleBlock;
+@property (nonatomic, copy) HeardViewHandle handleBlock;
 
-@property (nonatomic, strong)UIButton *backBtn;
+@property (nonatomic, strong) UIButton *backBtn;
 
-@property (nonatomic, copy)NSString *titleStr;
+@property (nonatomic, copy) NSString *titleStr;
 
-@property (nonatomic, assign)BOOL hideBackBtn;
+@property (nonatomic, assign) BOOL hideBackBtn;
 @end

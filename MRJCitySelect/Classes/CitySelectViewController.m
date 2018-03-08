@@ -129,12 +129,15 @@ shouldReloadTableForSearchString:(NSString *)searchString {
         return nil;
     }
     
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, MRJ_SCREEN.width, 24)];
-    label.font = [UIFont systemFontOfSize:13];
-    label.backgroundColor = [UIColor colorWithHexString:@"efeff4"];
-    label.textColor = [UIColor colorWithHexString:@"999999"];
-    label.text = [NSString stringWithFormat:@"\t\t%@",_arrayKeys[section]];
-    return label;
+    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MRJ_SCREEN.width, 24)];
+    backView.backgroundColor = [UIColor colorWithHexString:@"efeff4"];
+    CATextLayer *textLayer = [CATextLayer layer];
+    textLayer.frame = CGRectMake(15, 0, MRJ_SCREEN.width - 30, 24);
+    [textLayer setFontSize:13];
+    [textLayer setForegroundColor:[UIColor colorWithHexString:@"999999"].CGColor];
+    [textLayer setString:[NSString stringWithFormat:@"%@",_arrayKeys[section]]];
+    [backView.layer addSublayer:textLayer];
+    return backView;
 }
 
 - (CGFloat)tableView:( UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -263,15 +266,5 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     _backImage = backImage;
     [_headView.backBtn setImage:backImage forState:UIControlStateNormal];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
