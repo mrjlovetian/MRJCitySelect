@@ -69,7 +69,6 @@
     
     [_arrayKeys addObjectsFromArray:entryWords];
     self.DataSource = sorterArray;
-    
     [self.contactTableView reloadData];
 }
 
@@ -168,12 +167,7 @@ shouldReloadTableForSearchString:(NSString *)searchString {
         cell.textLabel.textColor = [UIColor colorWithHexString:@"333333"];
         cell.textLabel.font = [UIFont systemFontOfSize:16];
         cell.textLabel.frame = CGRectMake(15, cell.textLabel.frame.origin.y, cell.textLabel.frame.size.width, cell.textLabel.frame.size.height);
-        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, MRJ_SCREEN.width, 0.5)];
-        lineView.tag = 1000;
-        [cell.contentView addSubview:lineView];
     }
-    UIView *lineView = [cell viewWithTag:1000];
-    lineView.hidden = indexPath.row == 0;
     if ([tableView isEqual:_searchDisPlayCon.searchResultsTableView]) {
         CityModelManger *city = self.searchArray[indexPath.row];
         cell.textLabel.text  = city.regionName;

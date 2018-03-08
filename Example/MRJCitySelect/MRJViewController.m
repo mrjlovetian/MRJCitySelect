@@ -30,6 +30,9 @@
 - (void)click {
     CitySelectViewController *vc = [[CitySelectViewController alloc] init];
     vc.navTitle = @"选择城市";
+    vc.cityBlock = ^(CityModelManger *city) {
+        NSLog(@"选中的城市是%@", city.regionName);
+    };
     [self presentViewController:vc animated:YES completion:^{
         
     }];
