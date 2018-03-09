@@ -12,9 +12,9 @@
 #import "MJExtension.h"
 #import "UIColor+MRJAdditions.h"
 
-#define MRJ_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define MRJiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 #define MRJ_SCREEN [[UIScreen mainScreen] bounds].size
-#define MRJ_NavBAR_HEIGHT (MRJ_iPhoneX ? 88 : 64)//bar的高度
+#define MRJ_NAVBAR_HEIGHT (MRJiPhoneX ? 88 : 64)//bar的高度
 
 @interface CitySelectViewController ()<BATableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -65,8 +65,7 @@
 }
 
 - (void)reloadCity:(NSArray *)entryWords sortArray:(NSDictionary *)sorterArray {
-    _arrayKeys = [[NSMutableArray alloc]initWithObjects:nil];
-    
+    _arrayKeys = [[NSMutableArray alloc] initWithCapacity:1];
     [_arrayKeys addObjectsFromArray:entryWords];
     self.DataSource = sorterArray;
     [self.contactTableView reloadData];
@@ -206,7 +205,7 @@ shouldReloadTableForSearchString:(NSString *)searchString {
 
 - (CityHeadView *)headView {
     if (!_headView) {
-        _headView = [[CityHeadView alloc] initWithFrame:CGRectMake(0, 0, MRJ_SCREEN.width, MRJ_NavBAR_HEIGHT)];
+        _headView = [[CityHeadView alloc] initWithFrame:CGRectMake(0, 0, MRJ_SCREEN.width, MRJ_NAVBAR_HEIGHT)];
         _headView.backgroundColor = [UIColor whiteColor];
     }
     return _headView;
@@ -214,7 +213,7 @@ shouldReloadTableForSearchString:(NSString *)searchString {
 
 - (BATableView *)contactTableView {
     if (!_contactTableView) {
-        _contactTableView = [[BATableView alloc]initWithFrame:CGRectMake(0, MRJ_NavBAR_HEIGHT + 56 , MRJ_SCREEN.width, MRJ_SCREEN.height - MRJ_NavBAR_HEIGHT - 56)];
+        _contactTableView = [[BATableView alloc]initWithFrame:CGRectMake(0, MRJ_NAVBAR_HEIGHT + 56 , MRJ_SCREEN.width, MRJ_SCREEN.height - MRJ_NAVBAR_HEIGHT - 56)];
         _contactTableView.delegate = self;
         _contactTableView.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
@@ -223,7 +222,7 @@ shouldReloadTableForSearchString:(NSString *)searchString {
 
 - (UISearchBar *)searchBar {
     if (!_searchBar) {
-        _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, MRJ_NavBAR_HEIGHT, MRJ_SCREEN.width, 28)];
+        _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, MRJ_NAVBAR_HEIGHT, MRJ_SCREEN.width, 28)];
         _searchBar.delegate = self;
         _searchBar.placeholder = @"搜索城市";
         UIView *bgdView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, MRJ_SCREEN.height, _searchBar.frame.size.height)];

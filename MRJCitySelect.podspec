@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MRJCitySelect'
-  s.version          = '0.2.0.3'
+  s.version          = '0.2.0.4'
   s.summary          = '城市选择 MRJCitySelect.'
 
 # This description is used to generate tags and improve search results.
