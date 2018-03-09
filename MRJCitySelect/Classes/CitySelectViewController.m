@@ -3,7 +3,7 @@
 //  LoveQi
 //
 //  Created by tops on 2018/3/1.
-//  Copyright © 2018年 李琦. All rights reserved.
+//  Copyright © 2018年 余洪江. All rights reserved.
 //
 
 #import "CitySelectViewController.h"
@@ -51,6 +51,7 @@
 - (void)getData {
     NSInteger version = [[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] stringByReplacingOccurrencesOfString:@"." withString:@""] integerValue];
     if ([CityModelManger getAllCitys].count == 0 || version > [[[NSUserDefaults standardUserDefaults] objectForKey:@"version"] integerValue]) {
+        /// 第三方使用资源的资源读取方式
         NSURL *boundleUrl = [[NSBundle bundleForClass:[CitySelectViewController class]] URLForResource:@"MRJCitySelect" withExtension:@"bundle"];
         NSBundle *citysBundle = [NSBundle bundleWithURL:boundleUrl];
         NSData *data = [[NSData alloc] initWithContentsOfFile:[citysBundle pathForResource:@"city" ofType:@"json"]];

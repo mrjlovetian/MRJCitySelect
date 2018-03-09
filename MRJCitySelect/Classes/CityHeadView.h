@@ -18,4 +18,5 @@ typedef void(^HeardViewHandle)(void);
 @property (nonatomic, copy) NSString *titleStr;
 
 @property (nonatomic, assign) BOOL hideBackBtn;
+
 @end

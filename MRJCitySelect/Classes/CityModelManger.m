@@ -3,7 +3,7 @@
 //  LoveQi
 //
 //  Created by tops on 2018/3/1.
-//  Copyright © 2018年 李琦. All rights reserved.
+//  Copyright © 2018年 余洪江. All rights reserved.
 //
 
 #import "CityModelManger.h"
@@ -71,6 +71,7 @@ MJExtensionCodingImplementation
             return [obj1 compare:obj2 options:NSNumericSearch];
         }];
         
+        /// 开启现成保存数据
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [self saveAllCity:resultkArrSort];
             [self saveAllSortCity:sorterDic];
@@ -84,7 +85,9 @@ MJExtensionCodingImplementation
     });
 }
 
+/// 简单数据类型采用数据读写的方式存储
 + (void)saveAllCity:(NSArray *)citys {
+    /// 此处的版本存储用做辅佐判断是否请求新数据的条件
     NSInteger version = [[ [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] stringByReplacingOccurrencesOfString:@"." withString:@""] integerValue];
     [[NSUserDefaults standardUserDefaults] setObject:@(version) forKey:@"version"];
     NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
@@ -99,10 +102,10 @@ MJExtensionCodingImplementation
     return arr;
 }
 
+/// 复杂对象类型采用归档
 + (void)saveAllSortCity:(NSDictionary *)sortCity {
     NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
     NSString *pathFile = [cachefile stringByAppendingPathComponent:@"mrj_sortCity.data"];  //要保存的文件名
-    // Encoding
     [NSKeyedArchiver archiveRootObject:sortCity toFile:pathFile];
 }
 
