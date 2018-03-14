@@ -2,7 +2,7 @@
 //  CityHeadView.m
 //  MRJCitySelect
 //
-//  Created by MRJ on 2018/3/3.
+//  Created by MRJ 余洪江 on 2018/3/3.
 //
 
 #import "CityHeadView.h"
