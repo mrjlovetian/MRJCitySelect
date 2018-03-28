@@ -24,23 +24,23 @@ MJExtensionCodingImplementation
     CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformMandarinLatin, NO);
     CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformStripDiacritics, NO);
     
-    if ([[(NSString *)sourceString substringToIndex:1] compare:@"长"] ==NSOrderedSame) {
+    if ([[(NSString *)sourceString substringToIndex:1] compare:@"长"] == NSOrderedSame) {
         [source replaceCharactersInRange:NSMakeRange(0, 5)withString:@"chang"];
     }
     
-    if ([[(NSString *)sourceString substringToIndex:1] compare:@"沈"] ==NSOrderedSame) {
+    if ([[(NSString *)sourceString substringToIndex:1] compare:@"沈"] == NSOrderedSame) {
         [source replaceCharactersInRange:NSMakeRange(0, 4)withString:@"shen"];
     }
     
-    if ([[(NSString *)sourceString substringToIndex:1] compare:@"厦"] ==NSOrderedSame) {
+    if ([[(NSString *)sourceString substringToIndex:1] compare:@"厦"] == NSOrderedSame) {
         [source replaceCharactersInRange:NSMakeRange(0, 3)withString:@"xia"];
     }
     
-    if ([[(NSString *)sourceString substringToIndex:1] compare:@"地"] ==NSOrderedSame) {
+    if ([[(NSString *)sourceString substringToIndex:1] compare:@"地"] == NSOrderedSame) {
         [source replaceCharactersInRange:NSMakeRange(0, 3)withString:@"di"];
     }
     
-    if ([[(NSString *)sourceString substringToIndex:1] compare:@"重"] ==NSOrderedSame) {
+    if ([[(NSString *)sourceString substringToIndex:1] compare:@"重"] == NSOrderedSame) {
         [source replaceCharactersInRange:NSMakeRange(0, 5) withString:@"chong"];
     }
     
@@ -90,13 +90,13 @@ MJExtensionCodingImplementation
     /// 此处的版本存储用做辅佐判断是否请求新数据的条件
     NSInteger version = [[ [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] stringByReplacingOccurrencesOfString:@"." withString:@""] integerValue];
     [[NSUserDefaults standardUserDefaults] setObject:@(version) forKey:@"version"];
-    NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
+    NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     NSString *pathFile = [cachefile stringByAppendingPathComponent:@"mrj_citys.json"];  //要保存的文件名
     [citys writeToFile:pathFile atomically:YES];  //写入文件
 }
 
 + (NSArray *)getAllCitys {
-    NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
+    NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     NSString *pathFile = [cachefile stringByAppendingPathComponent:@"mrj_citys.json"];
     NSArray *arr = [NSArray arrayWithContentsOfFile:pathFile];
     return arr;
@@ -104,13 +104,13 @@ MJExtensionCodingImplementation
 
 /// 复杂对象类型采用归档
 + (void)saveAllSortCity:(NSDictionary *)sortCity {
-    NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
+    NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     NSString *pathFile = [cachefile stringByAppendingPathComponent:@"mrj_sortCity.data"];  //要保存的文件名
     [NSKeyedArchiver archiveRootObject:sortCity toFile:pathFile];
 }
 
 + (NSDictionary *)getAllSortCity {
-    NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
+    NSString *cachefile = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     NSString *pathFile = [cachefile stringByAppendingPathComponent:@"mrj_sortCity.data"];
     NSDictionary *sortCity = [NSKeyedUnarchiver unarchiveObjectWithFile:pathFile];
     return sortCity;

@@ -94,9 +94,9 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     return YES;
 }
 
-- (void)filterContentForSearchText:(NSString *)searchText scope:(NSInteger )scopeOption {
+- (void)filterContentForSearchText:(NSString *)searchText scope:(NSInteger)scopeOption {
     [self.searchArray removeAllObjects];
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[cd] %@",searchText];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[cd] %@", searchText];
     for (NSArray *array in self.DataSource.allValues) {
         for (CityModelManger *city in array) {
             if ([resultPredicate evaluateWithObject:city.regionName]) {
@@ -134,7 +134,7 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     textLayer.frame = CGRectMake(15, 0, MRJ_SCREEN.width - 30, 24);
     [textLayer setFontSize:13];
     [textLayer setForegroundColor:[UIColor colorWithHexString:@"999999"].CGColor];
-    [textLayer setString:[NSString stringWithFormat:@"%@",_arrayKeys[section]]];
+    [textLayer setString:[NSString stringWithFormat:@"%@", _arrayKeys[section]]];
     [backView.layer addSublayer:textLayer];
     return backView;
 }
