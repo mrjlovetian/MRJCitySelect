@@ -13,7 +13,7 @@
 
 MJExtensionCodingImplementation
 
-//检测字母的读音是否
+/// 检测字母的读音是否
 + (NSString *)phonetic:(NSString *)sourceString {
     
     if ([sourceString isEqualToString:@""]) {

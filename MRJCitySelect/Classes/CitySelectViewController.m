@@ -186,7 +186,7 @@ shouldReloadTableForSearchString:(NSString *)searchString {
     CityModelManger *city = nil;
     if ([tableView isEqual:_searchDisPlayCon.searchResultsTableView]) {
         city = self.searchArray[indexPath.row];
-    } else{
+    } else {
         NSArray *array = [self.DataSource objectForKey:_arrayKeys[indexPath.section]];
         city = array[indexPath.row];
     }
