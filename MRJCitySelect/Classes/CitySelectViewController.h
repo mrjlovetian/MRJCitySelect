@@ -19,7 +19,7 @@ typedef void(^CitySelectBlock)(CityModelManger *city);
 
 @interface CitySelectViewController : UIViewController
 
-@property (nonatomic, weak) id <SelectCityListVCDelegate>delegate;
+@property (nonatomic, weak) id<SelectCityListVCDelegate> delegate;
 @property (nonatomic, copy) CitySelectBlock cityBlock;
 
 @property (nonatomic, copy) NSString *navTitle;

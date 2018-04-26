@@ -13,7 +13,7 @@
 @property (nonatomic, copy) NSString *regionName;
 @property (nonatomic, copy) NSString *regionId;
 
-//城市按字母排序
+/// 城市按字母排序
 + (void)sorterFromArray:(NSArray *)array success:(void (^)(NSArray *entryWords, NSDictionary *sorterArray))success;
 
 + (void)saveAllCity:(NSArray *)citys;

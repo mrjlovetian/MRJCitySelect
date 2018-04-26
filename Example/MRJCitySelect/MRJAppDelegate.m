@@ -13,6 +13,30 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    /// block内部引用外部变量，并且block被赋值，这属于NSMallocBlock
+    int a = 0;
+    void (^blocka)(void) = ^{
+        NSLog(@"-=-=-=-=%d", a);
+    };
+    blocka();
+    
+    /// 没有引用外部变量，但是有赋值=符号，这属于NSGlobalBlock
+    void (^blockb)(void) = ^{
+        
+    };
+    
+    /// 没有引用外部变量， 这属于NSGlobalBlock
+    NSLog(@"=-=-=-=-=-%@", ^(){
+        
+    });
+    
+    /// 引用外部变量， 这属于NSStackBlock
+    NSLog(@"=-=-=-=-=-%@", ^(){
+        NSLog(@"%d", a);
+    });
+    
+    
     return YES;
 }
 
