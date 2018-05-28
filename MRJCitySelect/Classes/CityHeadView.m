@@ -72,7 +72,7 @@
 #pragma mark SET
 
 - (void)setTitleStr:(NSString *)titleStr {
-    _titleStr = titleStr;
+    _titleStr = [titleStr copy];
     self.titleLab.text = titleStr;
 }
 
