@@ -22,7 +22,7 @@ MJExtensionCodingImplementation
     NSMutableString *source = [sourceString mutableCopy];
     CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformMandarinLatin, NO);
     CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformStripDiacritics, NO);
-    
+    // 多音字处理
     if ([[(NSString *)sourceString substringToIndex:1] compare:@"长"] == NSOrderedSame) {
         [source replaceCharactersInRange:NSMakeRange(0, 5)withString:@"chang"];
     }
